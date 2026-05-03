@@ -1,0 +1,107 @@
+/* ── Todo Manager: Admin Styles ──────────────────────────────────────────── */
+
+.todo-admin-wrap { max-width: 960px; }
+
+/* ── Add Form ── */
+.todo-admin-add-form {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 1.25rem 1.5rem 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.todo-admin-add-form h2 { margin-top: 0; }
+
+.todo-add-row {
+	display: flex;
+	gap: .6rem;
+	align-items: center;
+}
+
+.todo-add-row .regular-text { flex: 1; max-width: 500px; }
+
+/* ── Table ── */
+#todo-admin-table.hidden { display: none; }
+
+.column-status  { width: 110px; }
+.column-created { width: 160px; }
+.column-actions { width: 230px; }
+
+.todo-badge {
+	display: inline-block;
+	padding: .2rem .6rem;
+	border-radius: 20px;
+	font-size: .8rem;
+	font-weight: 600;
+}
+
+.todo-status-done    { background: #d1fae5; color: #065f46; }
+.todo-status-pending { background: #fef3c7; color: #92400e; }
+
+.todo-title-done {
+	text-decoration: line-through;
+	color: #a0aec0;
+}
+
+.todo-loading-indicator {
+	padding: 1rem 0;
+	color: #646970;
+}
+
+.todo-empty-state {
+	padding: 1.5rem;
+	text-align: center;
+	color: #646970;
+	background: #f6f7f7;
+	border: 1px dashed #c3c4c7;
+	border-radius: 4px;
+	margin-top: .5rem;
+}
+
+.todo-empty-state.hidden,
+.notice.hidden { display: none; }
+
+/* ── Modal ── */
+.todo-modal { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; }
+.todo-modal.hidden { display: none; }
+
+.todo-modal-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,.5);
+}
+
+.todo-modal-content {
+	position: relative;
+	background: #fff;
+	border-radius: 6px;
+	padding: 1.75rem 2rem 2rem;
+	width: 480px;
+	max-width: 95vw;
+	box-shadow: 0 8px 30px rgba(0,0,0,.15);
+}
+
+.todo-modal-content h2 { margin-top: 0; }
+
+.todo-modal-content label {
+	display: block;
+	font-weight: 600;
+	margin: 1rem 0 .3rem;
+}
+
+.todo-modal-content .regular-text { width: 100%; }
+
+.todo-modal-content input[type="checkbox"] {
+	width: 1.1rem;
+	height: 1.1rem;
+	vertical-align: middle;
+}
+
+.todo-modal-actions {
+	margin-top: 1.25rem;
+	display: flex;
+	gap: .5rem;
+}
+
+.todo-modal-content .notice { margin-top: 1rem; }
